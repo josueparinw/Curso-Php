@@ -1,6 +1,14 @@
-<?php
-/*
- * EJERCICIO 1
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h1>EJERCICIO 1</h1>
  *
  * ---------------------------
  *
@@ -23,16 +31,38 @@
  * S no puede acceder, muestra el motivo por el que se le ha denegado el acceso.
  *
  * Condición: Utiliza operadores lógicos para combinar las diferentes condiciones
- *
- * */
+<br>
+<br>
+
+    <?php
+$nombre="josue";
+$edad=22;
+$membresia="basic";
+$cuota=true;
+$hora=15;
+
+
+if ($edad>16 && $cuota==true){
+    if (
+        ($membresia=="basic" && $hora>=8 && $hora <18)||
+        ($membresia=="premium"&& $hora>=7 && $hora <21)||
+        ($membresia=="vip"&& $hora>=6 && $hora < 23)
+        ){
+            echo"acceso permitido ",$nombre ," tienes la membresia: ",$membresia;
+        }else{
+            echo"acceso denegado";
+        }
+}elseif ($edad<16){
+    echo"no cumples con la edad necesaria";
+}else{
+    echo "no cumples con la cuota";
+}
 
 
 
+?>
 
-
-
-/*
- * EJERCICIO 2
+<h1>EJERCICIO 2</h1>
  *
  * ---------------------------
  *
@@ -71,13 +101,36 @@
  * IMPORTANTE: Primero se aplica el descuento y después se calcula el envío
  * */
 
+<br>
+<br>
+
+<form method="POST">
+    <input type="number" name="descuento">
+    <button type="submit">enviar descuento numero
+    </button>
+</form>
+
+<br>
+<?php
+
+$importe=1500;
+$EsCliente=true;
+$codigoDescuent="";
+$descuento=$_POST["descuento"];
 
 
 
+
+
+
+
+
+
+?>
 
 /*
  *
- * Ejercicio 3
+<h1>EJERCICIO 3</h1>
 Una empresa de transporte quiere calcular el precio de un viaje dependiendo del tipo de transporte utilizado.
 
 Crea las siguientes variables:
@@ -120,4 +173,8 @@ Finalmente, muestra algo similar a (ejemplo de salida):
 
 Para el transporte debes utilizar match, no switch.
 
- * */
+
+<br>
+<br>
+</body>
+</html>
