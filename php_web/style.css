@@ -1,0 +1,31 @@
+main {
+    padding: 100px 50px;
+    background-color: rgb(161, 196, 116);
+}
+section{
+    border: 1px solid #fc17f0;
+    border-radius: 15px;
+    padding: 50px 40px;
+    text-align: center;
+
+}
+section.juego{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+section.juego > .item{
+    border: 1px dashed #1c1fa8 ;
+    border-radius: 15px;
+    padding: 25px 15px;
+    position: relative;
+}
+img{
+    width: 200px;
+    height: 50;
+    border-radius: 15px;
+}
+section.josue > div.categoria{
+    position: absolute;
+    
+}

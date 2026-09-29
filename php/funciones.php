@@ -30,7 +30,7 @@ $componentes = Array(
 // Producto: Monitor, 249.95 <span>curved</span>
 
 
-
+ 
 foreach ($componentes as $componente) {
     estructuraProductoHTML($componente);
 }
