@@ -1,0 +1,29 @@
+
+main {
+    padding: 60px 50px;
+    background-color: rgb(240, 118, 118);
+    
+}
+
+.text-center {
+    text-align: center;
+}
+
+section {
+    border: 1px solid #130707;
+    border-radius: 15px;
+    padding: 50px 40px;
+}
+
+section.peliculas{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    grid-gap: 25px;
+}
+.item {
+    border-radius: 15px;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 15px 25px;
+}
