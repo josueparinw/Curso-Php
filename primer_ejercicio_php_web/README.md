@@ -64,7 +64,7 @@ Muestra todas las películas en forma de **tarjetas (cards)**. Cada tarjeta debe
 
 ### Sección 2 — Solo Marvel o solo DC
 Muestra en tarjetas únicamente las películas cuyo `universo` sea **Marvel** (o DC, tú eliges). Usa una variable 
-`$filtroUniverso = "Marvel"` al principio para definir el filtro.
+`$filtroUniverso = "Marvel"` al principio para d    efinir el filtro.
 
 ### Sección 3 — Mejores películas
 Muestra solo las películas con una **puntuación de 8 o más**, también en tarjetas.
