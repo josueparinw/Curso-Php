@@ -39,7 +39,9 @@ $carrito = array(
                 <div class="item">
                     <span class="category"><?= $juego["categoria"]; ?></span>
 
-                    <img src="<?= $juego['imagen'] ?>" alt="<?= $juego["nombre"]; ?>">
+                    <img 
+                    src="<?= $juego['imagen'] ?>" 
+                    alt="<?= $juego["nombre"]; ?>">
 
                     <h2 class="title text-center"><?php echo $juego["nombre"]; ?></h2>
                     <p class="description text-center">

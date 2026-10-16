@@ -1,26 +1,26 @@
 <?php
-require_once __DIR__."/../config.php";
+require_once __DIR__. "/../config.php";
 
 function pintarTarjeta($item) {
 ?>
 <div class="tarjeta">
     <img 
-    src="<?=$item["imagen"]?>"
-    alt="<?=$item["titulo"]?>"
+    src="<?=$item["imagen"];?>"
+    alt="<?=$item["titulo"];?>"
     >
     <div class="contenido-tarjeta">
-        <h3><?=$item["titulo"]?></h3>
+        <h3><?=$item["titulo"];?></h3>
         <p>
             <strong>Génnero</strong>
-            <?=$item["genero"]?>
+            <?=$item["genero"];?>
         </p>
         <p>
             <strong>año</strong>
-            <?=$item["anio"]?>
+            <?=$item["anio"];?>
         </p>
         <p>
             <strong>Descripción</strong>
-            <?=$item["descripcion"]?>
+            <?=$item["descripcion"];?>
         </p>
         <?php
         if($item["destacado"]): ?>
