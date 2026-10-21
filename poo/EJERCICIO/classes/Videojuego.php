@@ -153,7 +153,7 @@ class Videojuego{
 
     public function filter($criterio):bool
     {
-        if ($criterio=="recomendad0"){
+        if ($criterio=="recomendado"){
             return $this->puntuacion >=8;
         }elseif($criterio=="oferta"){
             return $this->precio<=20;
@@ -171,25 +171,24 @@ class Videojuego{
         src="<?= $this->getImagen()?>" 
         alt="<?= $this->getTitulo()?>"
         >
-        
         <h1><?= $this->getTitulo()?></h1>
         <p><?= $this->getGenero()?></p>
-        <p><?= $this->getPuntuacion()?></p>
-        <p><?= $this->getPrecio()?></p>
-        <p><?= $this->getStock()?></p>
+        <p>⭐ <?= $this->getPuntuacion()?></p>
+        <p>Precio <?= $this->getPrecio()?></p>
 
-    </div>
+
     <?php 
         if($this->stock == 0){
             ?>
-            <p class="sin-stock"><?= $this->stock?> sin stok</p>
+            <p class="sin-stock"><?= $this->stock?> copias disp</p>
             <?php
         }else{
             ?>
-            <p class="con-stock"><?= $this->stock?> cuenta con stok</p>
+            <p class="con-stock"><?= $this->stock?> copias disp</p>
+    
             <?php
         }
-        
+    ?></div><?php
     }
 
 }

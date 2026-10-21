@@ -9,12 +9,12 @@ h1{
     margin-bottom: 35px;
     color:#66c0f4;
 }
-main{
+.contenedor{
     display: grid;
-    grid-column: repeat(auto-fit ,minmax(230px 1fr));
     gap: 25px;
-    max-width: 1200px;
     margin: 0 auto;
+    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit , minmax(300px, 1fr));    
 }
 .tarjeta {
     background-color: #1b2838;
@@ -55,4 +55,7 @@ main{
 .con-stock {
     color: #a4d007 !important;
     font-weight: bold;
+}
+.precio-descuento{
+    color: #ff6b6b !important;
 }
