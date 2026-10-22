@@ -7,55 +7,109 @@ background-color: #171a21; color: #ffffff;
 h1{
     text-align: center;
     margin-bottom: 35px;
-    color:#66c0f4;
+    
 }
 .contenedor{
     display: grid;
     gap: 25px;
     margin: 0 auto;
     max-width: 1200px;
-    grid-template-columns: repeat(auto-fit , minmax(300px, 1fr));    
+    grid-template-columns: repeat(auto-fit , minmax(300px, 1fr));
+    padding: 40px;
+
 }
 .tarjeta {
+    position: relative;
     background-color: #1b2838;
     border: 1px solid #2a475e;
     border-radius: 15px;
-    padding:18px;
-    text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease,box-shadow 0.3s ease;
     overflow: hidden;
 }
 .tarjeta:hover{
     transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(102, 192, 244, 0.2);
+    box-shadow: 0 8px 30px rgba(102, 192, 244, 0.2);
     border-color: #66c0f4;
+}  
+.tarjeta:hover>.contenido ,.tarjeta:hover > .puntuacion{
+    opacity: 1;
+    transition: 0.3s ease;
 }
+
+.tarjeta:hover> img{
+    filter: blur(2px);
+}
+
 .tarjeta img{
     width: 100%;
-    height: 160px;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+    display: block;
     border-radius: 15px;
     border-bottom: 12px;
+    
+    
 }
-.tarjeta h2 {
+/*.puntuacion{
+opacity: 0;
+transition: 0.3s ease;
+}*/
+
+
+.contenido{
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 40px;
+box-sizing: border-box;
+color: white;
+background:linear-gradient(0,0,0,0.85);
+opacity: 0;
+transition: 0.3s ease;
+}
+
+.tarjeta> h2 {
     color: #66c0f4;
     font-size: 20px;
     margin: 10px 0 15px; }
-.tarjeta p {
-    color: #c7d5e0;
-    font-size: 14px;
-    margin: 10px 0; 
-}
+
 .sin-stock {
-    color: #ff6b6b !important;
+    color: white;
+    background-color: #ff6b6b !important;
     font-weight: bold;
+    
 }
 
 .con-stock {
-    color: #a4d007 !important;
+    color: white;
+    background-color: #a4d007 !important;
     font-weight: bold;
+}
+
+.con-stock,.sin-stock{
+    position:absolute;
+    bottom: 0;
+    left: 10px;
+    box-shadow: 0 8px 15px black;
+    
+    padding: 10px;
+    border-radius: 15px;
 }
 .precio-descuento{
     color: #ff6b6b !important;
+}
+.puntuacion{
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    padding: 10px;
+    color: black;
+    border-radius: 15px 0 0 15px;
+    background-color:rgb(247, 244, 77);
+    margin: 0;
+    text-shadow: 0 8px 15px black;
+    box-shadow:0 8px 15px black;;
+
 }

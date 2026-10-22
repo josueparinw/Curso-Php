@@ -171,23 +171,28 @@ class Videojuego{
         src="<?= $this->getImagen()?>" 
         alt="<?= $this->getTitulo()?>"
         >
-        <h1><?= $this->getTitulo()?></h1>
-        <p><?= $this->getGenero()?></p>
-        <p>⭐ <?= $this->getPuntuacion()?></p>
-        <p>Precio <?= $this->getPrecio()?></p>
+        <p class="puntuacion">⭐ <?= $this->getPuntuacion()?></p>
+        
+        <div class="contenido">
+            <h1><?=strtoupper($this->getTitulo())?></h1>
+            <p><?= $this->getGenero()?></p>
+            
+            <p>Precio <?= $this->getPrecio()?></p>
 
 
-    <?php 
-        if($this->stock == 0){
-            ?>
-            <p class="sin-stock"><?= $this->stock?> copias disp</p>
-            <?php
-        }else{
-            ?>
-            <p class="con-stock"><?= $this->stock?> copias disp</p>
-    
-            <?php
-        }
+            <?php 
+            if($this->stock == 0){
+                ?>
+                <p class="sin-stock">Disponible</p>
+                <?php
+            }else{
+                ?>
+                <p class="con-stock">Disponible</p>
+
+                <?php
+            }
+        ?></div><?php
+
     ?></div><?php
     }
 
